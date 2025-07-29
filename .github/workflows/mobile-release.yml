@@ -7,7 +7,7 @@ permissions:
 
 env:
   PROJECT_NAME: PsychOnline
-  REPO_PATH: Ethantobot11/PsychOnline-Recreation
+  REPO_PATH: Ethantobot11/Pibby-Engine-0.6.3
 
 jobs:
   get-commit-hash:

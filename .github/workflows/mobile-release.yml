@@ -7,6 +7,7 @@ permissions:
 
 env:
   PROJECT_NAME: PsychEngine
+  REPO_PATH: Ethantobot11/Pibby-Engine-0.6.3
 
 jobs:
   build:

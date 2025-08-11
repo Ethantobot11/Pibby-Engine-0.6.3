@@ -6,7 +6,7 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychOnline
+  PROJECT_NAME: PibbyEngine 0.6.3
   REPO_PATH: Ethantobot11/Pibby-Engine-0.6.3
 
 jobs:
@@ -77,8 +77,8 @@ jobs:
            name: iOSBuild
            path: ${{ github.workspace }}
 
-      - name: Zip IOS File
-        run:  zip -r /home/runner/${{ env.PROJECT_NAME }}-iOS.zip ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
+      - name: Move iOS File
+        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}.ipa
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
@@ -88,4 +88,4 @@ jobs:
           prerelease: false
           files: |
             /home/runner/*.apk
-            /home/runner/*.zip
+            /home/runner/*.ipa
